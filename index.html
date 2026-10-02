@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi E-commerce</title>
+
+  <!-- Google Fonts: Montserrat y Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos externos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Encabezado con Logo y Título -->
+  <header>
+    <img src="https://picsum.photos/100" alt="Logo de Mi Tienda Online" width="100" height="100">
+    <h1>Mi Tienda Online</h1>
+  </header>
+
+  <!-- Menú de Navegación Interna -->
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <main>
+
+    <!-- 1. Sección Inicio con Multimedia -->
+    <section id="inicio">
+      <h2>Producto Destacado</h2>
+      <img src="https://picsum.photos/400/250" alt="Fotografía de producto destacado en oferta" width="400" height="250">
+
+      <h3>Conocé más sobre nosotros</h3>
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/yoOeplfXsiA?si=pNtEPfE1LIBUX7Rs" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <!-- 2. Sección de Productos (Flexbox) -->
+    <section id="productos">
+      <h2>Nuestros Productos</h2>
+
+      <div class="contenedor-productos">
+        
+        <div class="tarjeta-producto">
+          <img src="https://picsum.photos/250/180?random=1" alt="Auriculares Inalámbricos">
+          <h3>Auriculares Pro</h3>
+          <p>Sonido envolvente y cancelación de ruido.</p>
+          <a href="#">Comprar</a>
+        </div>
+
+        <div class="tarjeta-producto">
+          <img src="https://picsum.photos/250/180?random=2" alt="Reloj Inteligente">
+          <h3>Smartwatch V2</h3>
+          <p>Monitoreo cardíaco y batería de larga duración.</p>
+          <a href="#">Comprar</a>
+        </div>
+
+        <div class="tarjeta-producto">
+          <img src="https://picsum.photos/250/180?random=3" alt="Teclado Mecánico">
+          <h3>Teclado Mecánico</h3>
+          <p>Switches lineales y retroiluminación RGB.</p>
+          <a href="#">Comprar</a>
+        </div>
+
+        <div class="tarjeta-producto">
+          <img src="https://picsum.photos/250/180?random=4" alt="Mouse Gamer">
+          <h3>Mouse Ergonómico</h3>
+          <p>Sensor óptico de alta precisión y agarre cómodo.</p>
+          <a href="#">Comprar</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. Sección de Reseñas (CSS Grid) -->
+    <section id="resenas">
+      <h2>Opiniones de Clientes</h2>
+
+      <div class="contenedor-resenas">
+        
+        <div class="card">
+          <p class="comentario">"Excelente calidad de audio y la batería dura días enteros. Súper recomendados."</p>
+          <h4>— Martín G.</h4>
+          <span class="estrellas">★★★★★</span>
+        </div>
+
+        <div class="card">
+          <p class="comentario">"El reloj superó mis expectativas, mide muy bien los pasos y el ritmo cardíaco."</p>
+          <h4>— Sofía R.</h4>
+          <span class="estrellas">★★★★★</span>
+        </div>
+
+        <div class="card">
+          <p class="comentario">"El teclado mecánico se siente comodísimo para trabajar y jugar. El envío fue rapidísimo."</p>
+          <h4>— Lucas D.</h4>
+          <span class="estrellas">★★★★☆</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Sección de Contacto (Formspree) -->
+    <section id="contacto">
+      <h2>Contactanos</h2>
+
+      <form action="https://formspree.io/f/xzzbpwrz" method="POST">
+        <div>
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
+        </div>
+        <br>
+
+        <div>
+          <label for="email">Correo electrónico:</label><br>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        </div>
+        <br>
+
+        <div>
+          <label for="mensaje">Mensaje:</label><br>
+          <textarea id="mensaje" name="mensaje" rows="5" cols="35" placeholder="Escribí tu consulta..." required></textarea>
+        </div>
+        <br>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Pie de Página -->
+  <footer>
+    <p>&copy; 2026 Mi Tienda Online - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

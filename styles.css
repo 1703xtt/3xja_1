@@ -1,0 +1,278 @@
+/* Reseteo universal del Box Model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+/* 1. Tipografía base y reseteo general */
+body {
+  font-family: 'Open Sans', sans-serif; /* Fuente externa de Google Fonts para textos */
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+  color: #334155;
+}
+
+/* 2. Header estilizado con tipografía destacada */
+header {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif; /* Fuente destacada para títulos */
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* 3. Navegación */
+nav ul {
+  list-style: none;
+  padding: 0.75rem 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #1e293b;
+}
+
+nav a {
+  text-decoration: none;
+  color: #38bdf8;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f8fafc;
+}
+
+/* 4. Fondo personalizado con degradado y espaciados en la sección principal */
+#inicio {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); /* Degradado suave */
+  padding: 2.5rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#inicio h2, #inicio h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0369a1;
+}
+
+/* Estilos para la imagen y video de la sección */
+#inicio img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+#inicio iframe {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* 5. Sección de contacto */
+#contacto {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+#contacto h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0f172a;
+}
+
+/* 6. Footer */
+footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   SECCIÓN PRODUCTOS CON FLEXBOX (Clase 06)
+   ========================================= */
+
+#productos {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+#productos h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0f172a;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor flexible */
+.contenedor-productos {
+  display: flex;
+  flex-wrap: wrap;             /* Permite que las tarjetas pasen a la siguiente fila en pantallas chicas */
+  justify-content: center;       /* Centra los ítems a lo largo del eje principal */
+  align-items: stretch;          /* Iguala la altura de las tarjetas */
+  gap: 1.5rem;                   /* Separación moderna entre tarjetas */
+}
+
+/* Tarjeta individual (Flex Item y Modelo de Caja) */
+.tarjeta-producto {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;    /* Borde según el box model */
+  border-radius: 10px;
+  padding: 1.25rem;              /* Relleno interior */
+  width: 250px;                  /* Ancho fijo de cada tarjeta */
+  display: flex;
+  flex-direction: column;        /* Ordena imagen, texto y botón verticalmente */
+  justify-content: space-between;/* Distribuye el espacio para que los botones queden alineados abajo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.tarjeta-producto h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #1e293b;
+}
+
+.tarjeta-producto p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+/* Estilo del botón de compra */
+.tarjeta-producto a {
+  display: inline-block;
+  background-color: #0284c7;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.tarjeta-producto a:hover {
+  background-color: #0369a1;
+}
+
+/* =========================================
+   SECCIÓN RESEÑAS CON CSS GRID (Clase 07)
+   ========================================= */
+
+#resenas {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+#resenas h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0f172a;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor Grid con auto-fit y minmax */
+.contenedor-resenas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Estilos de las tarjetas de reseña */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto hover interactivo */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card .comentario {
+  font-style: italic;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+.card h4 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0.5rem 0 0.25rem;
+  color: #0f172a;
+}
+
+.card .estrellas {
+  color: #f59e0b;
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN: MEDIA QUERIES (Clase 07)
+   ========================================= */
+
+@media (max-width: 768px) {
+  /* Apilamos las reseñas en una sola columna en pantallas pequeñas */
+  .contenedor-resenas {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajustamos el formulario para dispositivos móviles */
+  #contacto {
+    margin: 1.5rem 1rem;
+    padding: 1.25rem;
+  }
+
+  #contacto input,
+  #contacto textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Reducimos el tamaño del título principal para evitar desbordes */
+  header h1 {
+    font-size: 1.7rem;
+  }
+}
